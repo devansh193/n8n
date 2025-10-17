@@ -1,12 +1,11 @@
-import { Button } from "@/components/ui/button";
-import { caller } from "@/trpc/server";
+import { requireAuth } from "@/lib/auth-utils";
+export const dynamic = "force-dynamic";
 
 const Page = async () => {
-  const users = await caller.getUsers();
+  const session = await requireAuth();
   return (
     <div className="min-h-screen min-w-screen flex items-center justify-center">
-      <h1>{JSON.stringify(users)}</h1>
-      <Button>Click Me</Button>
+      <h1>{JSON.stringify(session)}</h1>
     </div>
   );
 };
