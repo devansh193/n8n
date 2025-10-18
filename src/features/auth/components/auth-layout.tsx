@@ -10,7 +10,7 @@ export const AuthLayout = ({ children }: { children: React.ReactNode }) => {
           className="flex items-center gap-2 self-center font-medium"
         >
           <WorkflowIcon className="size-10" />
-          n8n
+          Better Work
         </Link>
         {children}
       </div>
