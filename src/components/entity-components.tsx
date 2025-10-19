@@ -131,7 +131,7 @@ export const EntityPagination = ({
           Previous
         </Button>
         <Button
-          disabled={page === totalPages || totalPages === 0 || disabled}
+          disabled={page >= totalPages || totalPages === 0 || disabled}
           variant={"outline"}
           size={"sm"}
           onClick={() => onPageChange(Math.min(totalPages, page + 1))}
