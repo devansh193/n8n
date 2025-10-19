@@ -9,7 +9,6 @@ import { toast } from "sonner";
 /**
  * Hook to fetch all workflows using suspense
  */
-
 export const useSuspenseWorkflows = () => {
   const trpc = useTRPC();
   return useSuspenseQuery(trpc.workflows.getMany.queryOptions());
@@ -18,7 +17,6 @@ export const useSuspenseWorkflows = () => {
 /**
  * Hook to create a new workflow
  */
-
 export const useCreateWorkflow = () => {
   const queryClient = useQueryClient();
   const trpc = useTRPC();
